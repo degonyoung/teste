@@ -1,0 +1,204 @@
+body{
+   
+    background: rgb(170, 226, 170) url(saude-maconha.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Oswald', Helvetica, sans-serif ; 
+}
+div{
+    font-family: 'Oswald', Helvetica, sans-serif ; 
+    font-variant:small-caps;
+    font:thin italic small-caps,'Oswald',Helvetica,sans-serif;
+    color:honeydew;
+    
+}
+.back:hover{
+    opacity: 30%;
+}
+/* LAYOUT BÁSICO MOBILE*/
+    *{
+        padding:0;
+        border:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .wrapper{
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+       
+   }
+    .wrapper > * {
+        padding:2.5rem
+    }
+    .entry-menu, footer{
+        background-color: rgb(95, 182, 95);
+      opacity: 50%;
+      
+    }
+    .nav{
+        order: 1;
+
+    }
+ 
+    footer{
+        order: 1;
+    }
+/* LAYOUT BLOG DENTRO DO BÁSICO MOBILE*/
+    img{
+        max-width: 100%;
+    }
+    .content{
+        padding:1.5rem;
+    }
+    .post{
+        margin-bottom: .8rem;
+        border-bottom: 1px solid grey;
+        padding:.7rem;
+    }
+    .post-title{
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin-bottom: .7rem;
+        font-family: 'Lobster';
+    }
+    .post-title a{
+        text-decoration: none;
+        color:honeydew;
+    }
+    .post-title a:hover, .entry-meta a:hover{
+        text-decoration: underline;
+    }
+    .entry-meta{
+        font-size: .8rem;
+        padding:.3rem 0 .7rem
+    }
+    .entry-meta  a{
+        text-decoration: none;
+        color:honeydew;
+    }
+    .post-thumbnail{
+        display: block;
+        margin-bottom: .7rem;
+    }
+    .entry-content p {
+        line-height: 1.5rem;
+    }
+    .more-link{
+        padding-left:.5rem;
+        text-decoration: none;
+        color:honeydew;
+    }
+    .more-link:hover{
+        text-decoration: underline;
+    }
+/* MENU RESPONSIVO  MOBILE*/
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+     #menu {
+        display: none;
+}
+    nav #menu:checked ~ ul{
+        display:block;
+
+    }
+    nav ul {
+		list-style-type: none;
+		display: none;
+        flex-direction: column;
+        margin: 10px 0 0 0;
+        padding:0;
+		
+	}
+    nav ul li{
+        flex:1 1 100%
+    }
+    nav ul li:not(.last){
+        margin-bottom: 10px;
+
+    }
+    nav ul li a{
+        background-color: rgb(8, 129, 34);
+        padding: 10px 0;
+        display:block;
+        text-decoration: none;
+        text-align: center;
+        color: rgb(255, 255, 255)
+    }
+    nav ul li a:hover{
+        background-color: rgb(143, 212, 158);
+    }
+    .menu{
+        padding: 10px;
+        background-color: rgb(8, 129, 34);
+        cursor:pointer;
+        align-self: flex-end;
+    }
+    .menu:hover{
+        background-color: rgb(175, 212, 183);
+    }
+
+@media screen and (min-width:764px){
+/* LAYOUT BÁSICO MOBILE*/
+    .wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .entry-menu, footer{
+        flex: 1 0 100%
+    }
+    .content{
+        flex:1 0 75%
+    }
+    .nav{
+        flex:1 0 25%
+    }
+/* LAYOUT BLOG DENTRO DO BÁSICO MOBILE*/
+    .post{
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .more-link{
+        padding-left: .5rem;
+    }
+    .entry-header, .entry-meta{
+        flex-basis:100%
+    }
+    .post-thumbnail{
+        flex-basis: 40%;
+    }
+    .entry-content{
+        flex-basis: 60%;
+        padding-left: 1rem;
+    }
+    /* MENU RESPONSIVO  DESKTOP*/
+    nav {
+            flex-direction: row; 
+    }
+    .menu{
+            display:none;
+    }
+    nav ul {
+            display:flex;
+			width: 30%;
+			flex-direction: row;
+            justify-content: space-between;
+            margin: 0;
+	}
+    nav ul li {
+            flex: 0 1 31%;
+            margin-bottom: 0 !important;
+    }
+    nav .menu {
+                display: none;
+        }
+    .content2{
+        padding:.7rem;
+    }
+    
+}
